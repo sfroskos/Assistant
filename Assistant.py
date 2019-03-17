@@ -138,8 +138,7 @@ userinput = dict.fromkeys(['text','flag','subject','object','verb','prep','prepo
 request = userinput
 userinput['text'] = getuserinput('What would you like to know?')
 goodconvo = True
-while goodconvo and userinput['text'].lower != 'quit':
-    print(goodconvo)
+while goodconvo and userinput['text'] != 'quit':
     request = analyzeuserinput(userinput)
     confirmedrequest = confirmrequest(request)
     goodconvo = confirmedrequest['flag']
